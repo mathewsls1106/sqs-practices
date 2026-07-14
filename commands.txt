@@ -1,0 +1,2 @@
+docker run --rm -v $(pwd):/app -w /app ghcr.io/astral-sh/uv:python3.12-bookworm-slim uv init
+docker run --rm -v $(pwd):/app -w /app ghcr.io/astral-sh/uv:python3.12-bookworm-slim uv add django-environ

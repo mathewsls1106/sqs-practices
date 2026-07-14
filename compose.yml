@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: .
+      target: development
+
+    network_mode: "host"
+    container_name: django_backend
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - .:/app
+      - venv_data:/app/venv
+      - sqlite_data:/app/data
+    environment:
+      - DEBUG=1
+    restart: always
+
+
+volumes:
+  venv_data:
+  sqlite_data:
